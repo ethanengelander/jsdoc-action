@@ -1,6 +1,7 @@
-name: 'JSDoc Action'
+name: 'JSDoc Action - With Package option'
 description: 'GitHub Action to build JSDoc documentation'
 author: 'André Storhaug'
+contributor: 'Ethan Engelander'
 branding:
   icon: 'file-text'  
   color: 'yellow'
