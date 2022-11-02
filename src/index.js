@@ -18,7 +18,8 @@ async function run() {
     const template = core.getInput('template') || input_template_name;
     const template_dir = core.getInput('template_dir');
     const front_page = core.getInput('front_page');
-
+    const package_file = core.getInput('package_file');
+    
     if (input_template_name) {
       core.warning(`❗The "template_name" input variable is deprecated in favor of "template"`);
     }
@@ -70,6 +71,10 @@ async function run() {
     if (front_page) {
       let readmePath = path.join(GITHUB_WORKSPACE, front_page);
       args.push('-R', readmePath);
+    }
+    if (package_file) {
+      let packageFilePath = path.join(GITHUB_WORKSPACE, package_file);
+      args.push('-P', packageFilePath);
     }
     if(output_dir) {
       args.push('-d', path.join(GITHUB_WORKSPACE, output_dir));
