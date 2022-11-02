@@ -29,6 +29,9 @@ inputs:
   front_page:
     description: 'The path to a Markdown file to be used as a the front page'
     required: false
+  package_file:
+    description: 'The path to a package.json file, default is package.js'
+    required: false
 runs:
   using: 'node12'
   main: 'src/index.js'
